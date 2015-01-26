@@ -50,6 +50,8 @@ module.exports = yeoman.generators.Base.extend({
 
 	install: function () {
 
+		this.npmInstall(['gulp'], { 'saveDev': true });
+
 		if(this.tasks.jade) {
 			this.npmInstall(['platdesign/pd-gulp-jade-task'], { 'saveDev': true });
 		}
