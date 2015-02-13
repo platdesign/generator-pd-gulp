@@ -33,6 +33,12 @@ module.exports = yeoman.generators.Base.extend({
 			name: 'js',
 			message: 'Do you need javascript in your project?',
 			default: true
+		},
+		{
+			type: 'confirm',
+			name: 'gfx',
+			message: 'Do you need graphics in your project?',
+			default: true
 		}];
 
 		this.prompt(prompts, function (props) {
@@ -52,6 +58,9 @@ module.exports = yeoman.generators.Base.extend({
 
 		this.npmInstall(['gulp'], { 'saveDev': true });
 
+		if(this.tasks.gfx) {
+			this.npmInstall(['platdesign/pd-gulp-gfx-generator'], { 'saveDev': true });
+		}
 		if(this.tasks.jade) {
 			this.npmInstall(['platdesign/pd-gulp-jade-task'], { 'saveDev': true });
 		}
