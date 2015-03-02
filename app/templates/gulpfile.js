@@ -4,8 +4,8 @@ var gulp = require('gulp');
 
 
 <% if (tasks.sass) { %>
-// Register sass tasks
-var sass = require('pd-gulp-sass-task')(gulp);
+// Load sass generator
+var sass = require('pd-gulp-sass')(gulp);
 
 sass.register({
 	assets: {
@@ -20,8 +20,8 @@ sass.register({
 
 
 <% } if (tasks.js) { %>
-// Register javascript tasks
-var js = require('pd-gulp-js-task')(gulp);
+// Load js generator
+var js = require('pd-gulp-js')(gulp);
 
 js.register({
 	assets: {
@@ -32,13 +32,25 @@ js.register({
 
 
 <% } if (tasks.jade) { %>
-// Register jade tasks
-var jade = require('pd-gulp-jade-task')(gulp);
+// Load jade generator
+var jade = require('pd-gulp-jade')(gulp);
 
 jade.register({
 	assets: {
 		src: './assets/jade/**/*.jade',
 		dest: './public/html'
+	}
+});
+<% } %>
+
+<% } if (tasks.gfx) { %>
+// Load gfx generator
+var gfx = require('pd-gulp-gfx')(gulp);
+
+gfx.register({
+	assets: {
+		src: './assets/gfx/**/*.{jpg,jpeg,gif,png,svg}',
+		dest: './public/gfx'
 	}
 });
 <% } %>
