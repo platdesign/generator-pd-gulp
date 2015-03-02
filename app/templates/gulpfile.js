@@ -41,7 +41,7 @@ jade.register({
 		dest: './public/html'
 	}
 });
-<% } %>
+
 
 <% } if (tasks.gfx) { %>
 // Load gfx generator
