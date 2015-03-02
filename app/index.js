@@ -59,16 +59,16 @@ module.exports = yeoman.generators.Base.extend({
 		this.npmInstall(['gulp'], { 'saveDev': true });
 
 		if(this.tasks.gfx) {
-			this.npmInstall(['platdesign/pd-gulp-gfx-generator'], { 'saveDev': true });
+			this.npmInstall(['pd-gulp-gfx'], { 'saveDev': true });
 		}
 		if(this.tasks.jade) {
-			this.npmInstall(['platdesign/pd-gulp-jade-task'], { 'saveDev': true });
+			this.npmInstall(['pd-gulp-jade'], { 'saveDev': true });
 		}
 		if(this.tasks.js) {
-			this.npmInstall(['platdesign/pd-gulp-js-task'], { 'saveDev': true });
+			this.npmInstall(['pd-gulp-js'], { 'saveDev': true });
 		}
 		if(this.tasks.sass) {
-			this.npmInstall(['platdesign/pd-gulp-sass-task'], { 'saveDev': true });
+			this.npmInstall(['pd-gulp-sass'], { 'saveDev': true });
 		}
 
 	}
