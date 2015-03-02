@@ -4,7 +4,7 @@
 
 ## Install
 
-	npm install -g platdesign/generator-pd-gulp
+	npm install -g generator-pd-gulp
 
 ## Useage
 
