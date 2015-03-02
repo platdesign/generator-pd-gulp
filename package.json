@@ -1,10 +1,13 @@
 {
   "name": "generator-pd-gulp",
   "version": "0.1.2",
-  "description": "Yeoman generator",
+  "description": "Yeoman generator for pd-gulp",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "platdesign/generator-pd-gulp",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/platdesign/generator-pd-gulp.git"
+  },
   "author": {
     "name": "Christian Blaschke",
     "email": "mail@platdesign.de",
@@ -23,7 +26,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.18.0",
+    "yeoman-generator": "^0.18.9",
     "chalk": "^0.5.0",
     "yosay": "^0.3.0"
   },
@@ -31,6 +34,6 @@
     "mocha": "*"
   },
   "peerDependencies": {
-    "yo": ">=1.0.0"
+    "yo": ">=1.4.0"
   }
 }
